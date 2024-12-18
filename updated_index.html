@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Assessment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Comprehensive AI Readiness Assessment</h1>
+    <form id="assessment-form">
+        <div class="section">
+            <h2>Organizational Readiness</h2>
+            <label><input type="checkbox" class="question"> Leadership interest in AI adoption?</label><br>
+            <label><input type="checkbox" class="question"> Resources allocated for AI?</label><br>
+            <label><input type="checkbox" class="question"> Internal/external stakeholders mapped?</label><br>
+            <label><input type="checkbox" class="question"> Engagement with donors for AI funding?</label>
+        </div>
+        <div class="section">
+            <h2>Regulatory Compliance</h2>
+            <label><input type="checkbox" class="question"> Compliant with GDPR or KVKK?</label><br>
+            <label><input type="checkbox" class="question"> Third-party vendor contracts audited?</label><br>
+            <label><input type="checkbox" class="question"> Sector-specific obligations addressed?</label><br>
+            <label><input type="checkbox" class="question"> Risk management policies in place?</label>
+        </div>
+        <button type="button" onclick="calculateResults()">Submit</button>
+    </form>
+    <canvas id="results-chart"></canvas>
+    <div id="recommendations"></div>
+
+    <form id="enhancement-form" style="margin-top: 20px;">
+        <input type="hidden" id="assessment-data" name="assessment-data">
+        <button type="button" onclick="submitToGPT()">Get Enhancement Suggestions</button>
+    </form>
+    <div id="gpt-response" style="margin-top: 20px; color: #333;"></div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
